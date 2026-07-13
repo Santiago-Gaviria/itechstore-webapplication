@@ -7,10 +7,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ServiceProduct {
+public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    
+    
     // Metodo para obtener todos los productos
     public List<Product> getAll() {
         return productRepository.findAll();
@@ -32,7 +34,7 @@ public class ServiceProduct {
         Product existingProduct = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Producto no encontrado en el id: " + id));
 
-        existingProduct.setName(productData.getName());
+        existingProduct.setProductName(productData.getProductName());
         existingProduct.setPrice(productData.getPrice());
         existingProduct.setStock(productData.getStock());
 

@@ -1,7 +1,7 @@
 package com.itechstore.platform.controller;
 
 import com.itechstore.platform.model.Product;
-import com.itechstore.platform.service.ServiceProduct;
+import com.itechstore.platform.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -13,9 +13,9 @@ import jakarta.validation.Valid;
 @RestController
 
 @RequestMapping("/api/products")//Endpoint API
-public class controllerProduct {
+public class ProductController{
     @Autowired
-    private ServiceProduct serviceProduct;
+    private ProductService serviceProduct;
 
     //GetMapping: Sirve para listar o consultar 
     @GetMapping
@@ -50,7 +50,7 @@ public class controllerProduct {
     }
      //Para este metodo se le asigna una etiqueta '@GetMapping con id', esto se hace
     //para ubicar el producto al cual se quiere acceder para actualizar sus datos.
-    @GetMapping("/stock/{cantidad}")
+    @GetMapping("/stock/{quantity}")
     public List<Product>getProductsByStock(@PathVariable Integer quantity){
         return serviceProduct.getProductsByStock(quantity);
 

@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 //Le decimos a JPA que este repositorio maneja la entidad "Product" y que su ID es de tipo 'Long'
 
-public interface ProductRepository extends JpaRepository<Product,Long> {
+public interface  ProductRepository extends JpaRepository<Product,Long> {
 
     List<Product>findByStock(Integer stock);
     // Al heredar de JpaRepository, esta interfaz ya tiene poderes mágicos:

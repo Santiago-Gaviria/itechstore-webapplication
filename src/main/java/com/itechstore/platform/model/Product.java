@@ -35,7 +35,7 @@ private Long id;
 
 @NotBlank(message="El nombre del producto debe ser es obligatorio")//Validacion de la industrioa que asegura no tener espacios vacios
 @Column(nullable=false,length=100)//Configuracion de la base de datos:Not Bull y maximo 100 caracteres
-private String name;
+private String productName;
 
 @NotNull(message="El precio es obligatorio")
 @Min(value=0,message="El precio no puede ser negativo")//validacion, evita datos corruptos
@@ -46,6 +46,15 @@ private Double price;
 @Min(value=0,message="El Stock disponible no puede ser negativo")
 @Column(nullable=false)
 private Integer stock;
+
+//Para conectar la clase Category.java(Entidad)
+@ManyToOne(fetch=FetchType.LAZY)
+@JoinColumn(name="CategoryId",nullable=false)
+private Category category;
+
+
+
+
 
 
 }
