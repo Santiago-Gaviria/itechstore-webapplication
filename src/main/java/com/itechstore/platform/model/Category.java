@@ -30,6 +30,7 @@ public class Category {
     //Con este codigo, se va a la clase Product.javay busca una variable con el nomre "category"
     @OneToMany(mappedBy="category",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
     private Set<Product>products= new HashSet<>();
+    
 
 
 

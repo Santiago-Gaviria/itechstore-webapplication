@@ -1,0 +1,57 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itech Store</title>
+    <!--  link rel permite conectar el css con el HTML-->
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body>
+    <div class="card">
+        <div class="header-banner">
+        <p>Add New Product</p>
+        </div>
+
+    <form id="productForm" class="form-container">
+        <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price"> Price</label>
+            <input type="number" id="price" step="0.01" required>
+        </div>
+        <!--Contenedor Stock-->
+        <div class="form-group">
+            <label for="stock"> Stock</label>
+            <input type="number" id="stock" required> 
+        </div>
+
+        
+        <div class="form-group">
+            <label for="categoryId">Id Category</label>
+            <input type="text" id="categoryId" required>
+        </div>
+
+        <div class="form-group btn-container">
+            <button type="submit" class="btn-submit"> Save Product</button>
+        </div>
+
+    </form>
+    <div id="message" class="message-box"></div>
+
+    </div>
+
+
+    <script src=" app.js"></script>
+
+
+
+
+</body>
+
+</html>

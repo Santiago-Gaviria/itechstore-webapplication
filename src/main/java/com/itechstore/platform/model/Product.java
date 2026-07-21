@@ -49,9 +49,8 @@ private Integer stock;
 
 //Para conectar la clase Category.java(Entidad)
 @ManyToOne(fetch=FetchType.LAZY)
-@JoinColumn(name="CategoryId",nullable=false)
+@JoinColumn(name="category_id")
 private Category category;
-
 
 
 

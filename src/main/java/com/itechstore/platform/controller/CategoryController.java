@@ -15,6 +15,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
 
+
     @GetMapping
     // 1. GET: Listar todas las categorías (ej: GET /api/categories)
     public List getCategories(){
@@ -45,6 +46,11 @@ public class CategoryController {
 
 
     }
+    public void methos(){
+        
+    }
+
+    
 
     
 }

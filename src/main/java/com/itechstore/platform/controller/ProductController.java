@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.LongAccumulator;
 import jakarta.validation.Valid;
 
 
+@CrossOrigin
 @RestController
 
 @RequestMapping("/api/products")//Endpoint API

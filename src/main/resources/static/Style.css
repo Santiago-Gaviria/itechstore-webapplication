@@ -1,0 +1,108 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN GLOBAL Y FONDO
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #dcdcdc; /* El gris de fondo de tu Sketch */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. LA TARJETA BLANCA
+   ========================================================================== */
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 540px; /* Ancho controlado para que se vea estilizado */
+    padding-bottom: 40px; /* Espacio al final de la tarjeta */
+}
+
+/* ==========================================================================
+   3. EL BANNER VERDE (HEADER)
+   ========================================================================== */
+.header-banner {
+    background-color: #8cb811; /* Tu verde oliva/limón */
+    color: #000000;
+    font-size: 26px;
+    padding: 30px 40px; /* Alineado con los márgenes de los inputs */
+    font-weight: normal;
+}
+
+/* ==========================================================================
+   4. EL CONTENEDOR DEL FORMULARIO
+   ========================================================================== */
+.form-container {
+    padding: 20px 40px; /* Margen interno izquierdo y derecho de 40px */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Separación vertical entre cada campo */
+}
+
+/* ==========================================================================
+   5. ETIQUETAS Y CAJAS GRISES (INPUTS)
+   ========================================================================== */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000000;
+}
+
+input {
+    width: 100%;
+    background-color: #b0b0b0; /* El gris sólido de tus cajas */
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    color: #000000;
+    outline: none; /* Evita bordes azules raros al escribir */
+}
+
+/* 🔍 TRUCO: Quita las flechas/spinners de los campos numéricos en Chrome, Safari y Firefox */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* ==========================================================================
+   6. EL BOTÓN "GUARDAR PRODUCTO"
+   ========================================================================== */
+.btn-submit {
+    background-color: #8cb811; /* Mismo verde del banner */
+    color: #000000;
+    border: none;
+    width: 100%;
+    padding: 18px;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 15px; /* Separación con el campo anterior */
+}
+
+.btn-submit:hover {
+    background-color: #769c0e; /* Se oscurece un poco al pasar el mouse */
+}
+
+/* ==========================================================================
+   7. MENSAJES DE RESPUESTA
+   ========================================================================== */
+.message-box {
+    margin: 0 40px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
