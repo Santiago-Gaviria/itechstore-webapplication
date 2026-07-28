@@ -21,7 +21,6 @@ public class CategoryController {
     public List getCategories(){
         return categoryService.getAllCategories();
 
-
     }
     @PostMapping
     // 2. POST: Crear una nueva categoría (ej: POST /api/categories)

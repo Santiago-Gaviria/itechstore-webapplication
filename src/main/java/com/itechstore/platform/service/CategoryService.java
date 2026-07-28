@@ -6,7 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+//Metodologia CRUD
 
+//CREATE
+//READ
+//UPDATE
+//DELETE
 @Service
 public class CategoryService  {
     private final ProductRepository productRepository;
