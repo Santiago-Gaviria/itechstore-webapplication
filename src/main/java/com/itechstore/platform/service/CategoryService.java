@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
-//Metodologia CRUD
+//CRUD methodology to realize request
+
 
 //CREATE
 //READ
@@ -22,25 +23,27 @@ public class CategoryService  {
         this.productRepository = productRepository;
     }
 
-    //1. Primero obtenemos todas las categorias
+    // 1. We get all the categories
     public List<Category>getAllCategories(){
         return categoryRepository.findAll();
 
 
     }
-    //2.Guardar o crear una nueva categoria
+
+    //2. Save or create a new category
     public Category saveCategory(Category category){
         return categoryRepository.save(category);
 
 
     }
-    //3. ELiminar una categoria mediante su ID
+
+    //3. Delete or create a category by its ID
     public void deleteCategory(Long id){
          categoryRepository.deleteById(id);
 
 
     }
-    //4. Actualizar una categoria
+    //4. Update a Category: updateCategory()
 
     public Category updateCategory(Long id, Category categoryData){
 

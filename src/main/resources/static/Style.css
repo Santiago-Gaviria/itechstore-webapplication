@@ -1,45 +1,45 @@
-
+/* =========================================
+   1. VARIABLES Y RESETEO
+   ========================================= */
 :root {
-    --bg-main: #111111;      /*Fondo Oscuro*/
-    --bg-card: #1C1C1C;       /* El fondo de las tarjetas*/
-    --bg-input: #262626;      /* Fondo para los campos de texto */
-    --neon: #E4FF1A;          /* Color Amarillo Neon*/
-    --text-main: #FFFFFF;     /* Texto principal*/
-    --text-muted: #888888;    /* Texto secundario gris */
-    --border-color: rgba(255, 255, 255, 0.08); /* Bordes muy sutiles */
+    --bg-main: #111111;       /* Fondo oscuro principal */
+    --bg-card: #1C1C1C;       /* Fondo de las tarjetas */
+    --bg-input: #262626;      /* Fondo inputs */
+    --neon: #E4FF1A;          /* Acento Neón */
+    --text-main: #FFFFFF;     /* Texto principal */
+    --text-muted: #888888;    /* Texto secundario */
+    --border-color: rgba(255, 255, 255, 0.08); 
 }
 
-/* Esto quita los márgenes feos del navegador y hace que todo mida bien */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
 }
 
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
-    overflow: hidden; /* Evita que la página entera haga scroll, solo las tablas lo harán */
+    overflow: hidden; /* Evita scroll en toda la página */
 }
 
-/* Estructura principal del layout */
+/* =========================================
+   2. ESTRUCTURA PRINCIPAL (LAYOUT)
+   ========================================= */
 .dashboard {
     display: flex;
     height: 100vh;
     width: 100vw;
 }
 
-/* Barra Lateral (Sidebar) */
 .sidebar {
-    width: 260px; /* Ancho fijo como en el diseño */
+    width: 260px; 
     background-color: var(--bg-main);
     border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    padding:30px;
 }
 
 .brand-title {
@@ -77,7 +77,6 @@ body {
     color: #000;
 }
 
-/* Área Principal */
 .main-content {
     flex: 1;
     display: flex;
@@ -98,12 +97,12 @@ body {
     font-weight: 600;
 }
 
-/* 
-   Tarjetas CARDS y GRID*/
+/* =========================================
+   3. TARJETAS (CARDS) Y GRID
+   ========================================= */
 .content-grid {
     padding: 40px;
     display: grid;
-    /* El formulario ocupa 350px, la tabla ocupa el resto del espacio */
     grid-template-columns: 350px 1fr; 
     gap: 30px;
     height: calc(100vh - 80px);
@@ -114,7 +113,7 @@ body {
     border-radius: 24px;
     padding: 30px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para dar profundidad */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
 }
 
 /* =========================================
@@ -169,14 +168,23 @@ body {
 .btn-neon:hover {
     background-color: var(--neon);
     color: #000;
-    box-shadow: 0 0 15px rgba(228, 255, 26, 0.3); /* Brillo neón al pasar el mouse */
+    box-shadow: 0 0 15px rgba(228, 255, 26, 0.3); 
+}
+
+.alert-message {
+    display: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
 }
 
 /* =========================================
    5. TABLA ESTILO DASHBOARD
    ========================================= */
 .table-card {
-    overflow-y: auto; /* Scroll si hay muchos productos */
+    overflow-y: auto; 
 }
 
 table {
@@ -200,7 +208,6 @@ td {
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-/* El botón ovalado estilo Figma */
 .status-pill {
     background-color: var(--neon);
     color: #000;

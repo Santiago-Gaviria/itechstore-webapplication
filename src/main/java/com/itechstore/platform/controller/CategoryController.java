@@ -29,6 +29,7 @@ public class CategoryController {
 
 
     }
+   
     @DeleteMapping("/{id}")
     // 3. DELETE: Eliminar una categoría por ID (ej: DELETE /api/categories/5)
     public String  deleteCategory(Long id){
@@ -45,11 +46,7 @@ public class CategoryController {
 
 
     }
-    public void methos(){
-        
-    }
-
-    
+   
 
     
 }

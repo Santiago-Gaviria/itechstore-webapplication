@@ -19,10 +19,13 @@ import lombok.AllArgsConstructor;
 
 // Despues con ayuda de lombok evitamos lineas de codigo repetitivas como getters,setters
 // y toString();
+
 @Data
 // @Data Genera automaticamente, getters,setters, toString y hashCode para que
 // Hibernate los detecte
-@NoArgsConstructor // Esto genera el constructor vacio que es necesario apra que hbernate lo
+
+
+@NoArgsConstructor // Esto genera el constructor vacio que es necesario para que hbernate lo
                       // detecte y funcione
 @AllArgsConstructor//Genera el constructor con todos los atributos de la clase
 
@@ -39,7 +42,7 @@ private String productName;
 
 @NotNull(message="El precio es obligatorio")
 @Min(value=0,message="El precio no puede ser negativo")//validacion, evita datos corruptos
-@Column(nullable=false)
+@Column(nullable=false)//Matenter la Base de datos integra evitando que se acepten datos nulos
 private Double price;
 
 @NotNull(message = "El Stock es obligatorio")
