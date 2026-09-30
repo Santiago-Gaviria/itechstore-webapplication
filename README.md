@@ -1,11 +1,11 @@
-# iTechStore — Inventory Management Dashboard.
+# N.O.V.A — Inventory Management Dashboard.
 
 ![Java](https://img.shields.io/badge/Java-17+-007396?style=for-the-badge&logo=java&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**iTechStore Dashboard** es una aplicación Full-Stack de gestión de inventarios diseñada bajo una **arquitectura desacoplada** y enfocada en la alta mantenibilidad, integridad de datos relacionales y estándares RESTful. Cuenta con una interfaz gráfica moderna, consumo asíncrono mediante `fetch` API y persistencia en base de datos relacional.
+**N.O.V.A** es una aplicación Full-Stack de gestión de inventarios diseñada bajo una **arquitectura desacoplada** y enfocada en la alta mantenibilidad, integridad de datos relacionales y estándares RESTful. Cuenta con una interfaz gráfica moderna, consumo asíncrono mediante `fetch` API y persistencia en base de datos relacional.
 
 ---
 
@@ -51,9 +51,9 @@ La API REST del servidor opera sobre la ruta base `/api/products`:
 El sistema está preparado para el despliegue independiente del cliente (Frontend) y servidor (Backend):
 
 ```text
-itechstore/
+N.O.V.A/
 ├── backend/ (Spring Boot + PostgreSQL)
-│   ├── src/main/java/com/itechstore/platform/
+│   ├── src/main/java/com/N.O.V.A/platform/
 │   │   ├── controller/      # ProductController.java (REST API Endpoints)
 │   │   ├── model/           # Entidades JPA (Product, Category)
 │   │   ├── repository/      # Interfaces Spring Data JPA
